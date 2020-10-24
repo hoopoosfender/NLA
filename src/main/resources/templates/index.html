@@ -22,19 +22,24 @@
         <table id="comments" class="table table-striped">
             <thead>
             <tr>
-                <th width="40%">Id</th>
-                <th width="60%">Name</th>
+                <th width="20%">ISBN</th>
+                <th width="60%">Title</th>
+                <th width="20%">Author</th>
             </tr>
             </thead>
             <tbody>
-
+            <tr th:each="book : ${books}">
+                <td th:text="${book.id}"></td>
+                <td th:text="${book.title}"></td>
+                <td th:text="${book.name}"></td>
+            </tr>
             </tbody>
         </table>
     </div>
 
 </div>
 
-<script data-th-src="@{/js/main.js}"></script>
+<!--<script data-th-src="@{/js/main.js}"></script>-->
 
 </body>
 

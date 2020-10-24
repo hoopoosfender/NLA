@@ -1,3 +1,4 @@
+/*
 
 $( document ).ready(function() {
   let endpoint = 'books'
@@ -30,4 +31,5 @@ var commentTable = document.getElementById("comments");
     })
 
 });
+*/
 

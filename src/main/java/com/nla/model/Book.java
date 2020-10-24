@@ -12,12 +12,14 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+    private String title;
 
     public Book() {
     }
 
-    public Book(String name) {
+    public Book(String name, String title) {
         this.name = name;
+        this.title = title;
     }
 
     @Override
@@ -42,5 +44,13 @@ public class Book {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

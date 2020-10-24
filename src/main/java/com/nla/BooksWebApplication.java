@@ -6,11 +6,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import com.nla.model.Book;
 
 @SpringBootApplication
-public class BooksWebApplication {
+public class BooksWebApplication extends SpringBootServletInitializer{
 
     public static void main(String[] args) {
         SpringApplication.run(BooksWebApplication.class, args);
@@ -22,10 +22,10 @@ public class BooksWebApplication {
         return (args) -> {
 
             // create books
-            bookRepository.save(new Book("Thinking in Java"));
-            bookRepository.save(new Book("Beginning Java 2"));
-            bookRepository.save(new Book("Java Gently"));
-            bookRepository.save(new Book("Java 2 Platform Unleashed"));
+            bookRepository.save(new Book("Ben Tu","Thinking in Java"));
+            bookRepository.save(new Book("Sam Lee","Beginning Java 2"));
+            bookRepository.save(new Book("Peter James","Java Gently"));
+            bookRepository.save(new Book("Jack Mark","Java 2 Platform Unleashed"));
 
             // fetch all books
             System.out.println("Books found with findAll():");
