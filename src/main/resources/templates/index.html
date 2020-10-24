@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link data-th-href="@{/css/bootstrap.min.css}" rel="stylesheet">
     <link data-th-href="@{/css/main.css}" rel="stylesheet">
+    <link data-th-href="@{/css/css-loader.css}" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 <body>
+<div class="loader loader-default"></div>
 
-<div class="container" id="books">
 
+<div class="container">
     <div class="row">
         <div id="title">
             <h1>Library People + Library Books</h1>
@@ -32,7 +34,9 @@
                 <td th:text="${ppl.name}"></td>
                 <td th:text="${ppl.email}"></td>
                 <td th:text="${ppl.phone}"></td>
-                <td><p th:each="pbk : ${ppl.books}"><span th:text="${pbk.title}"/></p></td>
+                <td><button th:if="${not #lists.isEmpty(ppl.books)}"type="button" class="btn btn-primary" id="showbooks" th:attr="name=${ppl.id}">Burrowed Books</button></td>
+                <!--<td><p th:each="pbk : ${ppl.books}"><span th:text="${pbk.title}"/></p></td>-->
+                <td></td>
             </tr>
             </tbody>
         </table>
@@ -59,7 +63,7 @@
 
 </div>
 
-<!--<script data-th-src="@{/js/main.js}"></script>-->
+<script data-th-src="@{/js/main.js}"></script>
 
 </body>
 
