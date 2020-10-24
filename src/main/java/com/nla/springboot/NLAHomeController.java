@@ -1,10 +1,10 @@
-package com.example.springboot;
+package com.nla.springboot;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-public class HelloController {
+public class NLAHomeController {
 
 	@RequestMapping("/")
 	public String index() {
