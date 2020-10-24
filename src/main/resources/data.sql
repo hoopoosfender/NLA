@@ -1,0 +1,27 @@
+DROP TABLE IF EXISTS BOOK;
+
+CREATE TABLE BOOK (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  author VARCHAR(250) NOT NULL,
+  title VARCHAR(250) NOT NULL,
+  ISBN VARCHAR(250) DEFAULT NULL
+);
+
+DROP TABLE IF EXISTS PEOPLE;
+
+CREATE TABLE PEOPLE (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  name VARCHAR(250) NOT NULL,
+  email VARCHAR(250) NOT NULL,
+  phone VARCHAR(250) DEFAULT NULL
+);
+
+INSERT INTO BOOK (author, title, ISBN) VALUES
+('Aliko Dangote', 'Billionaire Industrialist', 'ISBN0001'),
+('Bill Gates', 'Billionaire Tech Entrepreneur','ISBN1001'),
+('Folrunsho Alakija', 'Billionaire Oil Magnate','ISBN2001');
+
+INSERT INTO PEOPLE (name, email, phone) VALUES
+('Aliko Dangote', 'a@gmail.com', '0423666'),
+('Bill Gates', 'b@gmail.com','0422233'),
+('Folrunsho Alakija', 'c@gmail.com','02444232');
