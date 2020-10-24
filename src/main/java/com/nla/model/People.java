@@ -3,7 +3,13 @@ package com.nla.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.OneToMany;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
 import javax.persistence.Id;
+
+
+import java.util.List;
 
 @Entity
 public class People {
@@ -14,6 +20,14 @@ public class People {
     private String name;
     private String email;
     private String phone;
+
+    @OneToMany
+    @JoinTable
+            (
+                    name="PEOPLE_BOOK",
+                    joinColumns={ @JoinColumn(name="PEOPLE_ID", referencedColumnName="ID") }
+            )
+    private List<Book> books;
 
     public People() {
     }
@@ -62,5 +76,13 @@ public class People {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
     }
 }
