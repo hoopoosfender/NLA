@@ -20,8 +20,10 @@ CREATE TABLE PEOPLE (
 DROP TABLE IF EXISTS PEOPLE_BOOK;
 
 CREATE TABLE PEOPLE_BOOK (
-  people_id int NOT NULL,
-  books_id int NOT NULL
+  people_id INT NOT NULL,
+  books_id INT NOT NULL,
+  FOREIGN KEY (people_id) REFERENCES PEOPLE(id),
+  FOREIGN KEY (books_id) REFERENCES BOOK(id),
 );
 
 
