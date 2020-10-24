@@ -1,6 +1,7 @@
 package com.nla.controller;
 
 import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +25,7 @@ public class MainController {
     private List<Book> getBooks() {
         return this.bookRepository.findAll();
     }
+
     private List<People> getPeople() {
         return this.peopleRepository.findAll();
     }
@@ -32,11 +34,16 @@ public class MainController {
     public ModelAndView index(Model model) {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("index");
-        mv.getModel().put("books", getBooks());
         mv.getModel().put("people", getPeople());
         return mv;
     }
 
-
+    @GetMapping("/books")
+    public ModelAndView books(Model model) {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("index");
+        mv.getModel().put("books", getBooks());
+        return mv;
+    }
 
 }
