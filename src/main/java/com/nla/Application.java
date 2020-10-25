@@ -10,10 +10,10 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import com.nla.model.Book;
 
 @SpringBootApplication
-public class BooksWebApplication extends SpringBootServletInitializer{
+public class Application extends SpringBootServletInitializer{
 
     public static void main(String[] args) {
-        SpringApplication.run(BooksWebApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }
