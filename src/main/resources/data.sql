@@ -8,6 +8,18 @@ INSERT INTO BOOK (author, title, ISBN) VALUES
 INSERT INTO PEOPLE (name, email, phone) VALUES
 ('Aliko Dangote', 'a@gmail.com', '0423666'),
 ('Bill Gates', 'b@gmail.com','0422233'),
+('Folrunsho Alakija', 'c@gmail.com','02444232'),
+('Aliko Dangote', 'a@gmail.com', '0423666'),
+('Bill Gates', 'b@gmail.com','0422233'),
+('Folrunsho Alakija', 'c@gmail.com','02444232'),
+('Aliko Dangote', 'a@gmail.com', '0423666'),
+('Bill Gates', 'b@gmail.com','0422233'),
+('Folrunsho Alakija', 'c@gmail.com','02444232'),
+('Aliko Dangote', 'a@gmail.com', '0423666'),
+('Bill Gates', 'b@gmail.com','0422233'),
+('Folrunsho Alakija', 'c@gmail.com','02444232'),
+('Aliko Dangote', 'a@gmail.com', '0423666'),
+('Bill Gates', 'b@gmail.com','0422233'),
 ('Folrunsho Alakija', 'c@gmail.com','02444232');
 
 INSERT INTO PEOPLE_BOOK (people_id, books_id) VALUES

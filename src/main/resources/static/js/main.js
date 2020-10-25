@@ -26,6 +26,7 @@ $( ".showbooks" ).click(function() {
                                    cell2.innerHTML = value.author;
                    });
                    $("#borrow").css("display", "block");
+                   $("#dataTableDiv").css("display", "none");
         }, delay);
 
         }
@@ -36,3 +37,8 @@ $(document).ajaxStart(function() {
     $(".loader").addClass('is-active');
     });
 
+$(document).ready(function () {
+  $('#people').DataTable();
+  $('#books').DataTable();
+  $('.dataTables_length').addClass('bs-select');
+});
