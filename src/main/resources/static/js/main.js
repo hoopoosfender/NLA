@@ -8,7 +8,6 @@ $( ".showbooks" ).click(function() {
         contentType: "application/json",
         dataType: 'json',
         success: function(result){
-        //console.log(result);
         setTimeout(function() {
           $(".loader").removeClass('is-active');
         }, delay);
