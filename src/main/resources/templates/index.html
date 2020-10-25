@@ -37,10 +37,10 @@
     <div class="row">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" href="/">People</a>
+                <a th:attr="class=${people != null? 'nav-link active' : 'nav-link'}" href="/">People</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/books">Books</a>
+                <a th:attr="class=${books != null? 'nav-link active' : 'nav-link'}" href="/books">Books</a>
             </li>
         </ul>
     </div>
