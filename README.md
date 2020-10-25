@@ -1,7 +1,7 @@
 Check out:
 https://github.com/hoopoosfender/NLA.git
 
-Build:
+Build(JDK8 Maven 3.6):
 $ mvn spring-boot:run
 
 Test:
