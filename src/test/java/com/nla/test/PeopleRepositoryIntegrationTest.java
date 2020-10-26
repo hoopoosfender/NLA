@@ -51,6 +51,6 @@ public class PeopleRepositoryIntegrationTest {
 
         List<People> all = peopleRepository.findAll();
 
-        assertThat(all).hasSize(6).extracting(People::getName).contains(alex.getName(), ron.getName(), bob.getName());
+        assertThat(all).hasSize(18).extracting(People::getName).contains(alex.getName(), ron.getName(), bob.getName());
     }
 }
